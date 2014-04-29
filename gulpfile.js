@@ -45,7 +45,7 @@ gulp.task('sprites', function() {
 	    .pipe(sprite({
 	      name: name + '.jpg',
 	      style: '_' + name + '.scss',
-	      cssPath: distDir,
+	      cssPath: '../sprites/' + name + '/dist',
 	      processor: 'css',
 	      prefix:name
 	    }))
@@ -57,7 +57,7 @@ gulp.task('sprites', function() {
 
 	// Scan modules-dir and optimize each module
 	fs.readdir(dir, function(err, list) {
-		if (err) return done(err);
+		if (err) return err;
 
 		list.forEach(function(file) {
 			if(fs.lstatSync(dir + '/' + file).isDirectory()) {
@@ -126,7 +126,7 @@ gulp.task('js-build', function(){
 
 	// Scan modules-dir and optimize each module
 	fs.readdir('assets/rawjs/modules', function(err, list) {
-		if (err) return done(err);
+		if (err) return err;
 
 		list.forEach(function(file) {
 			var name = file.replace('.js', '');
