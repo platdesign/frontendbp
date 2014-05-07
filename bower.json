@@ -1,5 +1,5 @@
 {
-  "name": "pd-front-init",
+  "name": "bp",
   "version": "0.0.0",
   "authors": [
     "Christian Blaschke <mail@platdesign.de>"
@@ -13,12 +13,12 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    
-  },
   "dependencies": {
     "_normalize.scss": "*",
     "jquery": "~2.1.0",
     "modernizr": "~2.7.2"
+  },
+  "devDependencies": {
+    "pui": "*"
   }
 }
